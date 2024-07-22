@@ -8,6 +8,60 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root></app-root>
+<!-- app.component.html -->
+<div>
+ 
+  <h1>Health Challenge Tracker</h1>
+  
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="name">
+  </div>
+  <div>
+    <label for="type">Workout Type:</label>
+    <input type="text" id="type" [(ngModel)]="type">
+    <option 
+  </div>
+  <div>
+    <label for="minutes">Workout Minutes:</label>
+    <input type="number" id="minutes" [(ngModel)]="minutes">
+  </div>
+  <button (click)="addUser(name, type, minutes)">Add User</button>
+  
+  <div>
+    <label for="searchName">Search by Name:</label>
+    <input type="text" id="searchName" [(ngModel)]="searchName" (input)="filterUsers()">
+  </div>
+  <div>
+    <label for="filterType">Filter by Workout Type:</label>
+    <input type="text" id="filterType" [(ngModel)]="filterType" (input)="filterUsers()">
+  </div>
+  
+  <!-- <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Workouts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of filteredUsers">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let workout of user.workouts">{{ workout.type }} - {{ workout.minutes }} minutes</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+   <!-- app.component.html -->
+  
+  <!-- ... -->
+  
+  <canvas #chart></canvas>
+  </div>
 </body>
 </html>
