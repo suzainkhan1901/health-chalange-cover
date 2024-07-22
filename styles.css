@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+/* app.component.css */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  
+  input {
+    margin-bottom: 8px;
+  }/* You can add global styles to this file, and also import other style files */
